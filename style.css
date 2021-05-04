@@ -112,6 +112,7 @@ a.nav-link{
 	z-index: 1;
 	margin: auto;
 	padding: 20px;
+	max-width: 60%;
 }
 
 .intro  p{
