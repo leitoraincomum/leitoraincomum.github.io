@@ -1,4 +1,4 @@
-##Documentação do projeto origina
+## Documentação do projeto original
 
 ## Portfolio Website Template
 
