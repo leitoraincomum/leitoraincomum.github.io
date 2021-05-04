@@ -141,6 +141,7 @@ a.nav-link{
 	padding: 10px;
 	display: flex;
 	position: center;
+	max-width: 60%;
     align-items: space-around;
 	justify-content:center;
 }
