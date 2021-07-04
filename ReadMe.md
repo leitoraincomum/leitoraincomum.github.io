@@ -1,9 +1,13 @@
-## Site desenvolvido para a Disciplina de Desenvolvimento de Sistemas
+## Site desenvolvido para a Disciplina de Desenvolvimento de Sistemas (maio/2021)
 
-Para ver o trabalho escrito, clique [aqui](https://github.com/leitoraincomum/leitoraincomum.github.io/blob/d79dbc769a92223aaaa924d2c8322b538d97a62a/downloads/Desenvolvimento%20de%20Sistemas%20Portf%C3%B3lio%2005052021.pdf)
+Para ver o trabalho escrito, clique [aqui](\downloads\Desenvolvimento de Sistemas Portfólio 05052021.pdf)
 ## Documentação do projeto original
 
-## Portfolio Website Template
+Esse portfólio foi inspirado no modelo feito por @Lilykhan786 e disponibilizado no [Replit](https://replit.com/@templates/Portfolio-Site-Template). Um modelo original, foi pensado em formato de **Landing Page**, mas o projeto foi pensado para ser apresentado em formato de site de múltiplas páginas e assim nasceu esse formato. Foram alterados apenas pouco do arquivo HTML e CSS, não houveram alterações no JavaScript.
+
++ Imagens: autorais.
+
+## Portfolio Website Template (Documentação Original)
 
 This is a simple responsive portfolio website template that I made for Repl.it template jam. You can use it and make it yours by changing things and colors to your style and liking! I made it with a lot of hard work, love and of course with code :) I'm not a professional coder, but i tried my best to make it look cool and yet still keep it simple. While working with JS i got many errors, but thanks to [Kakashi](https://repl.it/@apoorvsingal) for fixing them. Also thanks to all people on discord who provided feedback and suggestions, especially Panda and Kub! :D
 
@@ -17,6 +21,5 @@ I learned so much while making this template, if you use it, please let me know.
 + Bit of **Jquery** to make header animation effects work
 + Bit of **JavaScript** to make a hamburger menu to work on mobile devices 
 + **Font Awesome** for Icons 
-+ **Unsplash** for Images 
 
 You can add more things to make it even cooler! The comments in the code will help you navigate through it. Have a nice day! :D 
