@@ -5,6 +5,7 @@ Para ver o trabalho escrito, clique [aqui](\downloads\Desenvolvimento de Sistema
 
 Esse portfólio foi inspirado no modelo feito por @Lilykhan786 e disponibilizado no [Replit](https://replit.com/@templates/Portfolio-Site-Template). Um modelo original, foi pensado em formato de **Landing Page**, mas o projeto foi pensado para ser apresentado em formato de site de múltiplas páginas e assim nasceu esse formato. Foram alterados apenas pouco do arquivo HTML e CSS, não houveram alterações no JavaScript.
 + Imagens: autorais.
++ última atualização: 05/07/2021
 
 ## Portfolio Website Template (Documentação Original)
 
