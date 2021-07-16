@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#home {
+    
+}
+strong { font-weight: 700; }
+
+.bg{
+    width: 100%;
+	height: 100vh;
+		top: 0px;
+	left: 0px;
+	background: rgba(140, 0, 255, .81); 
+	background:-moz-linear-gradient(45deg, rgba(140, 0, 255, .6) 0%, rgba(2, 242, 114, .7) 100%);
+	background:   -webkit-gradient( left bottom, right top, color-stop (0%, rgba(140, 0, 255, .6) ), color-stop(100%, rgba(2, 242, 114, .7) ) );
+	background: -webkit-linear-gradient(45deg, rgba(140, 0, 255, .6) 0%, rgba(199, 111, 180, 0.7) 100%); 
+	background:  -o-linear-gradient(45deg, rgba(140, 0, 255, .6) 0%, rgba(2, 242, 114, .7) 100%);
+	background: -ms-linear-gradient(45deg, rgba(140, 0, 255, .6) 0%, rgba(2, 242, 114, .7) 100%);
+	background:     linear-gradient(45deg, rgba(140, 0, 255, .6) 0%, rgba(2, 242, 114, .7) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c00ff', endColorstr='#02f272', GradientType=1);
+	z-index: 100;
+	/*-webkit-transform: translate3d(0, 0, 0);*/
+
+    /*tentativa de imagem de fundo, sobrepõe links
+    background-image: url(images/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: absolute;
+    background-size: cover;
+    opacity: 0.15;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;*/
+}
+
+.textpage{
+    text-align: center;
+    z-index: 1;
+    margin: auto;
+    padding: 5px;
+    width: 100%;
+    max-width: 800px;
+    top: 50%;
+    left: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 150px;
+}
+
+.sobremim{
+    text-align: justify;
+    color: rgb(126, 124, 125);
+    z-index: 1;
+    margin: auto;
+    padding: 5px;
+    width: 100%;
+    max-width: 800px;
+    top: 50%;
+    left: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 150px;
+}
+
+.logo {
+    width: 300px;
+    height: 100px;
+}
+
+
+header {
+    background-color: #6782a6;
+    display: flex; 
+	flex-wrap: wrap; 
+	justify-content: space-between; 
+	align-items: center; 
+	padding: 10px;
+    width: 100vw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+
+
+.menu {
+    justify-self: center;
+    display: flex;
+    width: 100%;
+}
+
+.menu li{
+    margin-left: 10px;
+}
+
+.menu li a { 
+	display: block; 
+	padding: 5px;
+    color: #fff;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background: #B0E0E6;
+    box-sizing: border-box;
+}
+
+
+
+h1 {
+    color: rebeccapurple;
+    font-size: 1.5rem;
+    font-family: 'Lobster', cursive, sans-serif, arial, helvetica;
+    font-style: oblique;
+    width: 100%;
+}
+
+h2{
+    color: #8A2BE2;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif, arial, helvetica;
+    width: 100%;
+}
+
+h3{
+    color: rgb(5, 5, 5);
+    font-size: 1rem;
+    text-align:justify;
+    font-family: 'Noticia Text', serif, arial, helvetica;
+}
+
+p{
+    color: #9626A0;
+    text-align: justify;
+    font-size: 1.2rem;
+}
+
+ul.a {
+    list-style-type: circle;
+    text-align: justify;
+    color: #2517f1;
+    font-size: 1rem;
+  }
+  
+
+a:link, a:visited {
+        color: black;
+        text-decoration: underline;
+        cursor: auto;
+      }
+      
+a:link:active, a:visited:active {
+        color: #6782a6;
+      }
+
+.menu-link {
+        z-index: 999;
+        color: #fff;
+        margin-left: 1ch;
+        font-family: 'Noticia Text', serif, arial, helvetica;
+        display: none;
+    }
+
+hr {
+    margin: 2px;
+    height: 5px;
+    width: 300px;
+    border-radius: 3px;
+    border: hidden;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    background: #9626A0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.redes{
+    font-size: 30px;
+    word-spacing: 3px;
+    padding: 10px;
+    justify-content: center;
+    display: flex;
+}
+.redes a{
+    margin: 10px;
+    font-size: 30px;
+}
+
+footer {
+    position: fixed; 
+    bottom: 0;
+    background-color: #6782a6;
+    width: 100%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif, arial, helvetica;
+}
+
+.footer{
+    color: #fff;
+    z-index: 100;
+}
+
