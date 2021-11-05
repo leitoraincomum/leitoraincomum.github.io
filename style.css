@@ -196,6 +196,18 @@ hr {
     font-size: 30px;
 }
 
+.redes2{
+    font-size: 20px;
+    word-spacing: 3px;
+    padding: 10px;
+    justify-content: center;
+    display: flex;
+}
+.redes2 a{
+    margin: 10px;
+    font-size: 20px;
+}
+
 footer {
     position: fixed; 
     bottom: 0;
@@ -205,8 +217,8 @@ footer {
     font-family: 'Roboto', sans-serif, arial, helvetica;
 }
 
-.footer{
+.footer{/* cor e tamanho do rodapé PESQUISAR ALINHAMENTO CENTRAL DO FOOTER*/
     color: #fff;
     z-index: 100;
+    height: 30px;
 }
-
