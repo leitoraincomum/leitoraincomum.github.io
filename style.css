@@ -222,3 +222,15 @@ footer {
     z-index: 100;
     height: 30px;
 }
+#menuPequeno{
+    display: none;
+}
+
+@media only screen and (max-width: 900px) {
+    #menuGrande{
+        display: none;
+    }
+    #menuPequeno{
+        display: block;
+    }
+  }
