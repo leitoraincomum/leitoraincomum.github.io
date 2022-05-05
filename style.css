@@ -227,7 +227,8 @@ footer {
 }
 
 #dropdownMenuButton1{
-    color: #2517f1;
+    color: #fff; /*-- cor da fonte*/
+    background-color: #6782a6; /*-- cor de fundo*/
 }
 
 @media only screen and (max-width: 900px) {
