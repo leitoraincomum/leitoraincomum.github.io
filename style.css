@@ -224,6 +224,7 @@ footer {
 }
 #menuPequeno{
     display: none;
+    background-color: #6782a6;
 }
 
 @media only screen and (max-width: 900px) {
