@@ -227,12 +227,12 @@ footer {
 }
 
 #dropdownMenu{ /*botão do menu dropdown*/
-    color: rgb(187, 106, 106); /*-- cor da fonte*/
+    color: #fff; /*-- cor da fonte*/
     background-color: #6782a6; /*-- cor de fundo*/
 }
 
 #corMenuSuspenso{
-    color: #fff; /*-- cor da fonte*/
+    color: rgb(204, 214, 236); /*-- cor da fonte*/
     background-color: #6782a6; /*-- cor de fundo*/
 }
 
