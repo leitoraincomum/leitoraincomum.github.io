@@ -227,7 +227,7 @@ footer {
 }
 
 #dropdownMenu{ /*botão do menu dropdown*/
-    color: #fff; /*-- cor da fonte*/
+    color: rgb(187, 106, 106); /*-- cor da fonte*/
     background-color: #6782a6; /*-- cor de fundo*/
 }
 
