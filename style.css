@@ -224,7 +224,10 @@ footer {
 }
 #menuPequeno{
     display: none;
-    background-color: #6782a6;
+}
+
+#dropdownMenuButton1{
+    color: #2517f1;
 }
 
 @media only screen and (max-width: 900px) {
