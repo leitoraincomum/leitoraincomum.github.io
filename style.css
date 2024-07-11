@@ -112,7 +112,6 @@ body {
     justify-content: center;
     background: #B0E0E6;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 
@@ -216,6 +215,10 @@ footer {
     width: 100%;
     text-align: center;
     font-family: 'Roboto', sans-serif, arial, helvetica;
+}
+
+#textpage{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .footer{/* cor e tamanho do rodapé PESQUISAR ALINHAMENTO CENTRAL DO FOOTER*/
