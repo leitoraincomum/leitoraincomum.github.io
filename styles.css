@@ -1,5 +1,6 @@
 /* styles.css */
 
+/* Estilos Gerais */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -14,16 +15,21 @@ body {
     align-items: center;
     background-color: #9B59B6; /* Cor lilás para o menu */
     padding: 10px 20px;
+    position: relative; /* Para posicionamento do menu mobile */
+    z-index: 100; /* Para garantir que o menu fique acima de outros elementos */
 }
 
 .navbar .logo {
     color: #fff;
     font-size: 24px;
+    text-transform: uppercase;
 }
 
 .navbar .nav-links {
     display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar .nav-links li {
@@ -49,31 +55,34 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Responsividade */
+/* Estilos Responsivos */
 @media (max-width: 768px) {
     .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
+        display: none; /* Menu oculto inicialmente */
+        flex-direction: column; /* Organiza os itens em coluna */
+        align-items: center; /* Centraliza os itens */
+        position: absolute; /* Menu é posicionado de forma absoluta */
         background-color: #9B59B6; /* Cor lilás para o menu mobile */
-        top: 60px;
-        right: 0;
-        width: 100%;
-        text-align: center;
+        top: 60px; /* Distância do topo */
+        left: 0; /* Alinhado à esquerda */
+        right: 0; /* Alinhado à direita */
+        width: 100%; /* Largura total */
+        text-align: center; /* Texto centralizado */
+        padding: 10px 0; /* Espaçamento interno */
+        z-index: 50; /* Fica abaixo do menu principal */
+        border-top: 2px solid #fff; /* Adiciona um separador */
     }
 
     .nav-links li {
-        margin: 15px 0;
+        margin: 15px 0; /* Espaçamento entre os itens */
     }
 
     .burger {
-        display: block;
+        display: block; /* Mostra o botão de hambúrguer */
     }
-}
 
-@media (max-width: 768px) {
     .nav-links.active {
-        display: flex;
+        display: flex; /* Exibe o menu quando ativo */
     }
 }
 
