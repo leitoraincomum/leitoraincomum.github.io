@@ -70,7 +70,7 @@ body {
         text-align: center; /* Texto centralizado */
         padding: 10px 0; /* Espaçamento interno */
         z-index: 50; /* Fica abaixo do menu principal */
-        border-top: 2px solid #fff; /* Adiciona um separador */
+        border-top: 0px solid #fff; /* Adiciona um separador */
     }
 
     .nav-links li {
