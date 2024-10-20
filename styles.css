@@ -1,43 +1,48 @@
-/* styles.css */
-
-/* Estilos Gerais */
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f4f4f4; /* Cor de fundo geral */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth; /* Scroll suave */
+
+}
+
+header {
+    background-color: #9b59b6;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #9B59B6; /* Cor lilás para o menu */
-    padding: 10px 20px;
-    position: relative; /* Para posicionamento do menu mobile */
-    z-index: 100; /* Para garantir que o menu fique acima de outros elementos */
+    width: 100%;
 }
 
-.navbar .logo {
-    color: #fff;
-    font-size: 24px;
-    text-transform: uppercase;
+.logo {
+    color: white;
+    font-size: 20px;
 }
 
-.navbar .nav-links {
-    display: flex;
+.nav-links {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    flex-direction: row;
 }
 
-.navbar .nav-links li {
+.nav-links li {
     margin: 0 15px;
 }
 
-.navbar .nav-links a {
-    color: #fff; /* Cor do texto dos links */
+.nav-links li a {
+    color: white;
     text-decoration: none;
     font-size: 18px;
 }
@@ -45,57 +50,70 @@ body {
 .burger {
     display: none;
     cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25px;
 }
 
 .burger div {
     width: 25px;
     height: 3px;
-    background-color: #fff;
-    margin: 5px;
-    transition: all 0.3s ease;
+    background-color: white;
 }
 
-/* Estilos Responsivos */
+.redes{
+    /* 
+    font-size: 30px;
+    word-spacing: 3px;
+    padding: 5px;
+    justify-content: none;
+    display: flex;
+     */
+}
+
+.redes a{
+    /* margin: 20px;
+    font-size: 10px; */
+    text-decoration: none;
+}
+
+
+
+/* Estilos para telas pequenas */
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Menu oculto inicialmente */
-        flex-direction: column; /* Organiza os itens em coluna */
-        align-items: center; /* Centraliza os itens */
-        position: absolute; /* Menu é posicionado de forma absoluta */
-        background-color: #9B59B6; /* Cor lilás para o menu mobile */
-        top: 60px; /* Distância do topo */
-        left: 0; /* Alinhado à esquerda */
-        right: 0; /* Alinhado à direita */
-        width: 100%; /* Largura total */
-        text-align: center; /* Texto centralizado */
-        padding: 10px 0; /* Espaçamento interno */
-        z-index: 50; /* Fica abaixo do menu principal */
-        border-top: 0px solid #fff; /* Adiciona um separador */
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        top: 0;
+        background-color: #9b59b6;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        max-width: 300px;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in-out;
+        z-index: 1;
     }
 
-    .nav-links li {
-        margin: 15px 0; /* Espaçamento entre os itens */
+    .nav-links.nav-active {
+        transform: translateX(0);
     }
 
     .burger {
-        display: block; /* Mostra o botão de hambúrguer */
+        display: flex;
     }
 
-    .nav-links.active {
-        display: flex; /* Exibe o menu quando ativo */
+    .nav-links li {
+        margin: 20px 0;
     }
 }
 
-main {
+/* Seções */
+section {
     padding: 20px;
-    text-align: center;
-}
+    margin: 0;
 
-main h1 {
-    color: #9B59B6; /* Cor lilás para o título principal */
-}
-
-main p {
-    color: #333;
-    font-size: 18px;
 }
