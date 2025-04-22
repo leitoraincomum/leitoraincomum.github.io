@@ -76,7 +76,8 @@ footer {
 .footer{/* cor e tamanho do rodapé PESQUISAR ALINHAMENTO CENTRAL DO FOOTER*/
     color: #fff;
     z-index: 100;
-    height: 20px;
+    height: 15px;
+    font-size: 10px;
 }
 
 .redes{
@@ -135,7 +136,7 @@ section {
     padding-top: 60px;
     padding-left: 20px;
     padding-bottom: 20px;
-    padding-right: 0;
+    padding-right: 10;
     margin: 0;
     z-index: 1;
 }
