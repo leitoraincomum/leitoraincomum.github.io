@@ -70,15 +70,16 @@ footer {
     width: 100%;
     bottom: 0;
     background-color: #9b59b6;
-    text-align: center;
+    display: flex; /* Ativa o flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 15px; /* Ajuste a altura conforme necessário */
     font-family: 'Roboto', sans-serif, arial, helvetica;
+    color: #fff; /* Cor do texto */
+    font-size: 10px; /* Ajuste o tamanho da fonte conforme necessário */
 }
-.footer{/* cor e tamanho do rodapé PESQUISAR ALINHAMENTO CENTRAL DO FOOTER*/
-    color: #fff;
-    z-index: 100;
-    height: 15px;
-    font-size: 10px;
-}
+
+
 
 .redes{
     /* 
@@ -96,7 +97,12 @@ footer {
     text-decoration: none;
 }
 
-
+hr {
+    border: none;
+    height: 2px;
+    background-color: #9b59b6; 
+    margin-right: 20px; /* Ajuste o valor conforme necessário */
+}
 
 /* Estilos para telas pequenas */
 @media (max-width: 768px) {
