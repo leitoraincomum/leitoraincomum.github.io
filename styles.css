@@ -5,13 +5,15 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Fonte para o corpo do texto */
     scroll-behavior: smooth; /* Scroll suave */
     position: relative;
     z-index: 1;
+    background: linear-gradient(135deg, #fff, #d7a3eb, #8096e4,  #dfbbed); /* Gradiente diagonal */
 }
 
 header {
+    font-family: 'Dancing Script', cursive; /* Nova fonte manuscrita */
     position: fixed; 
     width: 100%;
     background-color: #9b59b6;
@@ -19,7 +21,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Roboto', sans-serif, arial, helvetica;
 }
     
 
@@ -31,6 +32,9 @@ header {
 }
 
 .logo {
+    margin-left: 10px; /* Adiciona espaço à direita do texto da logo */
+    display: flex;
+    align-items: center;
     color: white;
     font-size: 20px;
 }
@@ -64,21 +68,27 @@ header {
     height: 3px;
     background-color: white;
 }
+.imglogo{
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+}
 
 footer {
     position: fixed; 
     width: 100%;
     bottom: 0;
     background-color: #9b59b6;
-    text-align: center;
+    display: flex; /* Ativa o flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 15px; /* Ajuste a altura conforme necessário */
     font-family: 'Roboto', sans-serif, arial, helvetica;
+    color: #fff; /* Cor do texto */
+    font-size: 10px; /* Ajuste o tamanho da fonte conforme necessário */
 }
-.footer{/* cor e tamanho do rodapé PESQUISAR ALINHAMENTO CENTRAL DO FOOTER*/
-    color: #fff;
-    z-index: 100;
-    height: 15px;
-    font-size: 10px;
-}
+
+
 
 .redes{
     /* 
@@ -96,7 +106,19 @@ footer {
     text-decoration: none;
 }
 
+hr {
+    border: none;
+    height: 2px;
+    background-color: #9b59b6; 
+    margin-right: 20px; /* Ajuste o valor conforme necessário */
+}
 
+h1 {
+    font-family: 'Pacifico', cursive; /* Fonte manuscrita */
+    font-size: 36px; /* Ajuste o tamanho */
+    color: #9b59b6; /* Cor do texto */
+    text-align: left; /* Centraliza o texto */
+}
 
 /* Estilos para telas pequenas */
 @media (max-width: 768px) {
@@ -133,10 +155,10 @@ footer {
 /* Seções */
 section {
     /*buscar possibilidades do topo e o footer não sobrepor as seções para melhorar esse padding */  
-    padding-top: 60px;
-    padding-left: 20px;
+    padding-top: 70px;
+    padding-left: 10px;
     padding-bottom: 20px;
-    padding-right: 10;
+    padding-right: 10px;
     margin: 0;
     z-index: 1;
 }
