@@ -121,6 +121,15 @@ h1 {
     text-align: left; /* Centraliza o texto */
 }
 
+h2 {
+    font-family: 'Dancing Script', cursive; /* Fonte manuscrita */
+    font-size: 25px; /* Ajuste o tamanho */
+    color: #6a5acd; /* Cor do texto */
+    text-align: left; /* Centraliza o texto */
+}
+
+
+
 /* Estilos para telas pequenas */
 @media (max-width: 768px) {
     .nav-links {
