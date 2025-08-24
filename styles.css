@@ -13,7 +13,8 @@ body {
 }
 
 header {
-    font-family: 'Dancing Script', cursive; /* Nova fonte manuscrita */
+    font-family: 'Pacifico', cursive;
+    /* font-family: 'Dancing Script', cursive; fonte anterior manuscrita */
     position: fixed; 
     width: 100%;
     background-color: #9b59b6;
