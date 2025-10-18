@@ -1,3 +1,14 @@
-# Novo site
-Repositório do novo site www.leitoraincomum.com.br que ficará em uma landing page mais limpa.
-Para contribuir com elementos de responsividade, faça fork do repositório, inclua suas alterações e abra um Pull Request.
+# site_leitoraincomum
+Repositório criado para juntar todas as versões do meu site de informações pessoais.
+- [www.leitoraincomum.com.br](www.leitoraincomum.com.br)
+
+[Primeira versão](https://github.com/leitoraincomum/site_leitoraincomum/tree/v.1)
+- Foi desenvolvida durante a disciplina de Desenvolvimento de Software enquanto eu cursava a graduação em Análise  e Desenvolvimento de Sistemas.
+- Toda a documentacao referente esta na branch.
+
+[Segunda versão](https://github.com/leitoraincomum/site_leitoraincomum/tree/v.2)
+- Foi uma evolução da primeira para ter mais responsividade ser mais limpa.
+
+[Terceira versão](https://github.com/leitoraincomum/site_leitoraincomum/tree/v.3)
+- Está em construção para ser uma versão mais responsiva e com menos elementos do que a anterior.
+- Sera apenas uma página com todas as informações, ou seja, uma *landing page*.
