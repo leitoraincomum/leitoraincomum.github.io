@@ -1,3 +1,5 @@
+![Banner com informações](new_banner.png)
+
 # leitoraincomum.github.io
 Repositório criado para juntar todas as versões do meu site de informações pessoais.
 - [www.leitoraincomum.com.br](www.leitoraincomum.com.br)
