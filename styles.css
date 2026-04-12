@@ -489,7 +489,7 @@ nav.scrolled {
   top: 2rem; right: 2rem;
   font-family: 'DM Mono', monospace;
   font-size: 0.65rem;
-  color: var(--border);
+  color: var(--accent);
 }
 .badge-current {
   display: inline-block;
@@ -691,7 +691,7 @@ footer {
   align-items: center;
 }
 .footer-logo { font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--muted); }
-.footer-credit { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--border); }
+.footer-credit { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--muted); }
 
 /* ── ANIMATIONS ── */
 @keyframes fadeUp {
