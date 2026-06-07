@@ -12,5 +12,12 @@ Repositório criado para juntar todas as versões do meu site de informações p
 - Foi uma evolução da primeira para ter mais responsividade ser mais limpa.
 
 [Terceira versão](https://github.com/leitoraincomum/site_leitoraincomum/tree/v.3)
-- Está em construção para ser uma versão mais responsiva e com menos elementos do que a anterior.
+- Foi construída para ser uma versão mais responsiva e com menos elementos do que a anterior.
 - É apenas uma página com todas as informações, ou seja, uma *landing page*.
+
+[Quarta versão](https://github.com/leitoraincomum/site_leitoraincomum/tree/v.4)
+- Melhorias das v.3
+
+[Quinta versão](https://github.com/leitoraincomum/site_leitoraincomum/tree/v.5)
+- Construção de um novo site, mais moderno e com mais responsividade que os anteriores.
+- Está em desenvolvimento.
