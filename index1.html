@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Fernanda Souza — Engenheira de Dados, Palestrante e Organizadora de Meetups. @leitoraincomum" />
+  <meta name="author" content="Fernanda Souza" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Fernanda Souza | leitoraincomum" />
+  <meta property="og:description" content="Engenheira de Dados · Palestrante · Organizadora de Meetups · Pessoas > Tecnologia" />
+  <meta property="og:url" content="https://leitoraincomum.com.br" />
+  <meta property="og:type" content="website" />
+
+  <title>Fernanda Souza | leitoraincomum</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Mono:wght@300;400;500&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- MOBILE NAV OVERLAY -->
+  <div class="nav-overlay" id="navOverlay">
+    <a href="#sobre"    onclick="closeMenu()">sobre</a>
+    <a href="#formacao" onclick="closeMenu()">formação</a>
+    <a href="#eventos"  onclick="closeMenu()">eventos</a>
+    <a href="#projetos" onclick="closeMenu()">projetos</a>
+    <a href="#contato"  onclick="closeMenu()">contato</a>
+  </div>
+
+  <!-- NAV -->
+  <nav id="mainNav">
+    <a class="nav-logo" href="#">@leitoraincomum</a>
+    <ul class="nav-links">
+      <li><a href="#sobre">sobre</a></li>
+      <li><a href="#formacao">formação</a></li>
+      <li><a href="#eventos">eventos</a></li>
+      <li><a href="#projetos">projetos</a></li>
+      <li><a href="#contato">contato</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- ══════════════════════════════
+       HERO
+  ══════════════════════════════ -->
+  <div class="hero">
+    <div class="hero-left">
+      <p class="hero-tag">Engenheira de Dados · Palestrante · Organizadora de Meetups</p>
+      <h1 class="hero-name">Fernanda<br><span>Souza.</span></h1>
+      <p class="hero-handle">@leitoraincomum · Ferraz de Vasconcelos/SP</p>
+      <p class="hero-desc">
+        Alguém que existe desde maio de 1985. Mãe, engenheira de dados,
+        desenvolvedora backend e uma leitora fora do comum. Leio código,
+        livros e desabafos — com igual dedicação.
+      </p>
+      <div class="hero-pills">
+        <span class="pill">preta</span>
+        <span class="pill">mãe</span>
+        <span class="pill">nerd</span>
+        <span class="pill">ela/dela</span>
+        <span class="pill">chocolate quente e café</span>
+        <span class="pill">pessoas &gt; tecnologia</span>
+        <span class="pill">diversidade</span>
+      </div>
+      <div class="hero-cta">
+        <a href="#eventos" class="btn btn-primary">ver eventos</a>
+        <a href="#contato" class="btn btn-outline">entrar em contato</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-visual"></div>
+      <div class="hero-grid-lines"></div>
+      <div class="hero-big-number">85</div>
+      <div class="floating-stat stat-1">
+        <div class="stat-number">15+</div>
+        <div class="stat-label">anos criando conteúdo</div>
+      </div>
+      <div class="floating-stat stat-2">
+        <div class="stat-number">27</div>
+        <div class="stat-label">repositórios no github</div>
+      </div>
+      <div class="floating-stat stat-3">
+        <div class="stat-number">∞</div>
+        <div class="stat-label">cafés consumidos</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span class="marquee-item"><span>✦</span> engenharia de dados</span>
+      <span class="marquee-item"><span>✦</span> diversidade &amp; inclusão</span>
+      <span class="marquee-item"><span>✦</span> comunidades tech</span>
+      <span class="marquee-item"><span>✦</span> backend development</span>
+      <span class="marquee-item"><span>✦</span> logística e operações</span>
+      <span class="marquee-item"><span>✦</span> open source</span>
+      <span class="marquee-item"><span>✦</span> palestras e eventos</span>
+      <span class="marquee-item"><span>✦</span> pessoas &gt; tecnologia</span>
+      <!-- duplicado para loop contínuo -->
+      <span class="marquee-item"><span>✦</span> engenharia de dados</span>
+      <span class="marquee-item"><span>✦</span> diversidade &amp; inclusão</span>
+      <span class="marquee-item"><span>✦</span> comunidades tech</span>
+      <span class="marquee-item"><span>✦</span> backend development</span>
+      <span class="marquee-item"><span>✦</span> logística e operações</span>
+      <span class="marquee-item"><span>✦</span> open source</span>
+      <span class="marquee-item"><span>✦</span> palestras e eventos</span>
+      <span class="marquee-item"><span>✦</span> pessoas &gt; tecnologia</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       SOBRE
+  ══════════════════════════════ -->
+  <div id="sobre">
+    <div class="sec">
+      <div class="sobre-grid reveal">
+        <div class="sobre-text">
+          <p class="section-label">sobre mim</p>
+          <h2 class="section-title">Uma trajetória<br><em>nada linear.</em></h2>
+          <p>
+            Sempre flertei com as áreas de  humanas, mas a tecnologia me encontrou
+            no caminho — e fiquei. Hoje atuo como <strong>Junior Data Engineer</strong> onde trabalho com dados no dia a dia
+            e sou <strong>embaixadora da comunidade LinuxTips</strong>, onde organizo meetups em São Paulo de maneira voluntária.
+          </p>
+          <p>
+            Em 2020, durante a pandemia, comecei a atuar como voluntária
+            em cursos de formação tech para jovens em situação de
+            vulnerabilidade. Essa experiência mudou meu olhar sobre o que 
+            eu posso fazer com a tecnologia — e para quem.
+          </p>
+          <div class="sobre-quote">
+            <p>"Sou muitas coisas, mas a principal é ser mãe do Arthur desde 2006."</p>
+          </div>
+          <div class="amor-list">
+            <div class="amor-item">apaixonada por chocolate quente, café &amp; boas conversas</div>
+            <div class="amor-item">valorant,  gartic phone &amp; stardew valley</div>
+            <div class="amor-item">livros, código e desabafos</div>
+            <div class="amor-item">comunidades que acolhem</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="sobre-card">
+            <div class="sobre-card-item">
+              <span class="label">cargo</span>
+              <span class="value">Junior Data Engineer</span>
+            </div>
+            <div class="sobre-card-item">
+              <span class="label">localização</span>
+              <span class="value">Ferraz de Vasconcelos/SP</span>
+            </div>
+            <div class="sobre-card-item">
+              <span class="label">pronomes</span>
+              <span class="value">ela/dela · she/her</span>
+            </div>
+            <div class="sobre-card-item">
+              <span class="label">github</span>
+              <span class="value">27 repositórios públicos</span>
+            </div>
+            <div class="sobre-card-item">
+              <span class="label">na internet desde</span>
+              <span class="value">2011 · como @leitoraincomum</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       FORMAÇÃO
+  ══════════════════════════════ -->
+  <div id="formacao" class="sec-surface">
+    <div class="sec">
+      <p class="section-label reveal">formação</p>
+      <h2 class="section-title reveal">Aprender não<br><em>tem prazo.</em></h2>
+      <div class="formacao-grid reveal">
+        <div class="formacao-card">
+          <div class="formacao-type">tecnólogo</div>
+          <div class="formacao-year">2020–2023</div>
+          <div class="formacao-title">Análise e Desenvolvimento de Sistemas</div>
+          <div class="formacao-inst">FATEC · Ferraz de Vasconcelos/SP</div>
+        </div>
+        <div class="formacao-card">
+          <div class="formacao-type">tecnólogo</div>
+          <div class="formacao-year">2016–2023</div>
+          <div class="formacao-title">Gestão de Tecnologia da Informação</div>
+          <div class="formacao-inst">FATEC · Itaquaquecetuba/SP</div>
+        </div>
+        <div class="formacao-card">
+          <div class="formacao-type">especialização</div>
+          <div class="formacao-year">2024</div>
+          <div class="formacao-title">Gestão de Projetos</div>
+          <div class="formacao-inst">ETEC Itaquera II · São Paulo/SP</div>
+
+        </div>
+        <div class="formacao-card">
+          <div class="formacao-type">pós-graduação</div>
+          <div class="formacao-year">2025–2026</div>
+          <div class="formacao-title">Especialização em Logística e Operações</div>
+          <div class="formacao-inst">IFSP · Suzano/SP</div>
+          <span class="badge-current">em andamento</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       EVENTOS
+  ══════════════════════════════ -->
+  <div id="eventos">
+    <div class="sec">
+      <p class="section-label reveal">palestras &amp; eventos</p>
+      <h2 class="section-title reveal">No palco e<br><em>nos bastidores.</em></h2>
+
+      <div class="eventos-tabs reveal">
+        <button class="tab-btn active" onclick="showTab('2026', this)">2026</button>
+        <button class="tab-btn" onclick="showTab('2025', this)">2025</button>
+        <button class="tab-btn" onclick="showTab('2024', this)">2024</button>
+        <button class="tab-btn" onclick="showTab('2023', this)">2023</button>
+        <button class="tab-btn" onclick="showTab('2022', this)">2022</button>
+        <button class="tab-btn" onclick="showTab('2021', this)">2021</button>
+      </div>
+
+      <!-- 2026 -->   
+      <div class="tab-content active" id="tab-2026">
+        <div class="evento-list">
+          <div class="evento-item">
+            <div class="evento-month">Jan</div>
+            <div class="evento-name">Meetup LinuxTips - FATEC Mogi das Cruzes<small>Mogi das Cruzes/SP</small></div>
+            <span class="evento-role palestra">organização</span>
+          </div>
+
+          <div class="evento-item">
+            <div class="evento-month">Fev</div>
+            <div class="evento-name"> Networking além do código, construindo carreira através de comunidades -  Centro Universitário UNIFAAT <small>Atibaia/SP</small></div>
+            <span class="evento-role palestra">palestra</span>
+          </div>
+
+          <div class="evento-item">
+            <div class="evento-month">Mar</div>
+            <div class="evento-name">Carreira em tech não é só código · Papo de Garota Tech - Oracle<small>São Paulo/SP</small></div>
+            <span class="evento-role palestra">roda de conversa</span>
+        </div>
+
+          <div class="evento-item">
+            <div class="evento-month">Mar</div>
+            <div class="evento-name">Meetup LinuxTips - FATEC Itaquera<small>São Paulo/SP</small></div>
+            <span class="evento-role palestra">organização</span>
+        </div>
+
+          <div class="evento-item">
+            <div class="evento-month">Mai</div>
+            <div class="evento-name">Meetup LinuxTips - Unibrad<small>São Paulo/SP</small></div>
+            <span class="evento-role palestra">organização</span>
+          </div>
+    
+          <div class="evento-item">
+            <div class="evento-month">Jun</div>
+            <div class="evento-name">Ler para evoluir · Como a leitura impulsiona o aprendizado contínuo - Clube de Leitura Dev<small>On-line</small></div>
+            <span class="evento-role palestra">roda de conversa</span>
+          </div>
+          
+          <div class="evento-item">
+            <div class="evento-month">Jul</div>
+            <div class="evento-name">Meetup LinuxTips - RedHat<small>São Paulo/SP</small></div>
+            <span class="evento-role palestra">organização</span>
+          </div>
+    
+        </div>
+    </div>
+
+
+
+      <!-- 2025 -->
+      <div class="tab-content" id="tab-2025">
+        <div class="evento-list">
+          <div class="evento-item">
+            <div class="evento-month">Jan</div>
+            <div class="evento-name">Mudança de planos — Como eu fui parar na Engenharia de Dados<small>Google</small></div>
+            <span class="evento-role palestra">palestra</span>
+          </div>
+          <div class="evento-item">
+            <div class="evento-month">Mar</div>
+            <div class="evento-name">Carreiras e tendências no mercado de tecnologia<small>DataGirls</small></div>
+            <span class="evento-role palestra">roda de conversa</span>
+          </div>
+          <div class="evento-item">
+            <div class="evento-month">Abr</div>
+            <div class="evento-name">Como entrar na carreira tech e dominar o palco<small>GDG Santos</small></div>
+            <span class="evento-role palestra">roda de conversa</span>
+          </div>
+          <div class="evento-item">
+            <div class="evento-month">Mai</div>
+            <div class="evento-name">Meetup LinuxTips — Google<small>São Paulo</small></div>
+            <span class="evento-role org">organização</span>
+          </div>
+          <div class="evento-item">
+            <div class="evento-month">Jul</div>
+            <div class="evento-name">Meetup LinuxTips — Oracle<small>São Paulo</small></div>
+            <span class="evento-role org">organização</span>
+          </div>
+          <div class="evento-item">
+            <div class="evento-month">Set</div>
+            <div class="evento-name">Meetup LinuxTips — will bank<small>São Paulo</small></div>
+            <span class="evento-role org">organização</span>
+          </div>
+          <div class="evento-item">
+            <div class="evento-month">Out</div>
+            <div class="evento-name">Hackathon Mulheres em Dados<small>Remoto</small></div>
+            <span class="evento-role jurada">jurada</span>
+          </div>
+          <div class="evento-item">
+            <div class="evento-month">Nov</div>
+            <div class="evento-name">Meetup LinuxTips — AWS<small>São Paulo</small></div>
+            <span class="evento-role org">organização</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2024 -->
+      <div class="tab-content" id="tab-2024">
+        <div class="evento-list">
+          <div class="evento-item">
+            <div class="evento-month">Jan</div>
+            <div class="evento-name">Meetup GitHub Open Source Community SP — ADE Sampa</div>
+            <span class="evento-role org">organização</span>
+          </div>
+          <div class="evento-item">
+            <div class="evento-month">Mar</div>
+            <div class="evento-name">Meetup GitHub Open Source Community SP — FATEC Itaquera</div>
+            <span class="evento-role org">organização</span>
+          </div>
+          <div class="evento-item">
+            <div class="evento-month">Abr</div>
+            <div class="evento-name">Meetup GitHub Open Source Community SP — will bank</div>
+            <span class="evento-role org">organização</span>
+          </div>
+          <div class="evento-item">
+            <div class="evento-month">Jun</div>
+            <div class="evento-name">Meetup Feministech — FATEC Itaquera</div>
+            <span class="evento-role org">organização</span>
+          </div>
+          <div class="evento-item">
+            <div class="evento-month">Jul</div>
+            <div class="evento-name">
+              O quanto o poder do coletivo pode ajudar na sua caminhada individual
+              <small>Campus Party SP · Palco Tech Orange Juice</small>
+            </div>
+            <span class="evento-role palestra">palestra</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2023 -->
+      <div class="tab-content" id="tab-2023">
+        <div class="evento-list">
+          <div class="evento-item">
+            <div class="evento-month">Set</div>
+            <div class="evento-name">
+              Coordenação da Trilha de Diversidade e Inclusão
+              <small>The Developers Conference — TDC SP</small>
+            </div>
+            <span class="evento-role org">coordenação</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2022 -->
+      <div class="tab-content" id="tab-2022">
+        <div class="evento-list">
+          <div class="evento-item">
+            <div class="evento-month">Mai</div>
+            <div class="evento-name">Roda de conversa sobre tecnologia — Wonder Tech<small>Zup Innovation</small></div>
+            <span class="evento-role palestra">conversa</span>
+          </div>
+          <div class="evento-item">
+            <div class="evento-month">Jul</div>
+            <div class="evento-name">Staff Perifacon — Brasilândia</div>
+            <span class="evento-role org">staff</span>
+          </div>
+          <div class="evento-item">
+            <div class="evento-month">Ago</div>
+            <div class="evento-name">Semana das Juventudes<small>Prefeitura de São Paulo</small></div>
+            <span class="evento-role palestra">participação</span>
+          </div>
+          <div class="evento-item">
+            <div class="evento-month">Set</div>
+            <div class="evento-name">A diversidade precisa ser pensada em diversos recortes<small>Octogats Conf</small></div>
+            <span class="evento-role palestra">palestra</span>
+          </div>
+          <div class="evento-item">
+            <div class="evento-month">Set</div>
+            <div class="evento-name">Coordenação da Trilha de Transformação Digital<small>TDC SP</small></div>
+            <span class="evento-role org">coordenação</span>
+          </div>
+          <div class="evento-item">
+            <div class="evento-month">Out</div>
+            <div class="evento-name">Como foi meu aprendizado com Kotlin — Pros e Contras<small>Kotlinautas</small></div>
+            <span class="evento-role palestra">palestra</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2021 -->
+      <div class="tab-content" id="tab-2021">
+        <div class="evento-list">
+          <div class="evento-item">
+            <div class="evento-month">Jul</div>
+            <div class="evento-name">
+              Primeira graduação após os 30 anos: desafios em sala de aula e no mercado
+              <small>Campus Party SP (Digital)</small>
+            </div>
+            <span class="evento-role palestra">palestra</span>
+          </div>
+          <div class="evento-item">
+            <div class="evento-month">Jul</div>
+            <div class="evento-name">
+              Pessoas negras na área de tecnologia: a educação como meio de inclusão
+              <small>Campus Party BSB (Digital)</small>
+            </div>
+            <span class="evento-role palestra">palestra</span>
+          </div>
+          <div class="evento-item">
+            <div class="evento-month">Set</div>
+            <div class="evento-name">
+              A importância da diversidade de idade, raça e classe na tecnologia
+              <small>TDC SP · Trilha de Diversidade</small>
+            </div>
+            <span class="evento-role palestra">palestra</span>
+          </div>
+          <div class="evento-item">
+            <div class="evento-month">Nov</div>
+            <div class="evento-name">
+              Graduação depois do 30: desafios em sala de aula e no mercado
+              <small>PrograMaria Summit</small>
+            </div>
+            <span class="evento-role palestra">palestra</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       PROJETOS
+  ══════════════════════════════ -->
+  <div id="projetos" class="sec-surface">
+    <div class="sec">
+      <p class="section-label reveal">projetos</p>
+      <h2 class="section-title reveal">Coisas que<br><em>construí.</em></h2>
+      <div class="projetos-grid reveal">
+        <div class="projeto-card">
+          <div class="projeto-icon">🎙️</div>
+          <div class="projeto-name">Podcast Criando Monstrinhos</div>
+          <div class="projeto-desc">Podcast sobre as delícias e desafios de criar adolescentes, em parceria com a @isistomie.</div>
+          <div class="projeto-years">2020 – 2021</div>
+          <a href="https://linklist.bio/pcmonstrinhos" class="projeto-link" target="_blank" rel="noopener">→ ouvir</a>
+        </div>
+        <div class="projeto-card">
+          <div class="projeto-icon">👩🏾‍💻</div>
+          <div class="projeto-name">Coordenação Feministech</div>
+          <div class="projeto-desc">Coordenação de eventos e podcast da comunidade de pessoas que se identificam no feminino e fazem live coding.</div>
+          <div class="projeto-years">2021 – 2024</div>
+          <a href="https://www.twitch.tv/team/livecodergirls" class="projeto-link" target="_blank" rel="noopener">→ conhecer</a>
+        </div>
+        <div class="projeto-card">
+          <div class="projeto-icon">📚</div>
+          <div class="projeto-name">Repositório conteudos-tech</div>
+          <div class="projeto-desc">Curadoria de ferramentas e conteúdos gratuitos para auxiliar quem está começando a estudar tecnologia.</div>
+          <div class="projeto-years">2021 – presente</div>
+          <a href="https://github.com/leitoraincomum/conteudos-tech" class="projeto-link" target="_blank" rel="noopener">→ github</a>
+        </div>
+        <div class="projeto-card">
+          <div class="projeto-icon">📺</div>
+          <div class="projeto-name">Live Coding na Twitch</div>
+          <div class="projeto-desc">Lives semanais compartilhando estudos e aprendizados — com as reclamações inclusas.</div>
+          <div class="projeto-years">2020 – 2021</div>
+          <a href="https://www.twitch.tv/leitoraincomum" class="projeto-link" target="_blank" rel="noopener">→ twitch</a>
+        </div>
+        <div class="projeto-card">
+          <div class="projeto-icon">🏴</div>
+          <div class="projeto-name">Staff Wakanda Streamers</div>
+          <div class="projeto-desc">Atuação em gestão e tecnologia no coletivo Wakanda Streamers, focado em diversidade e representatividade.</div>
+          <div class="projeto-years">2020 – 2021</div>
+          <a href="https://www.wakandastreamers.com.br" class="projeto-link" target="_blank" rel="noopener">→ ver</a>
+        </div>
+        <div class="projeto-card">
+          <div class="projeto-icon">🎮</div>
+          <div class="projeto-name">Host GG Talks</div>
+          <div class="projeto-desc">Condução das conversas da GG Talks, programa semanal do projeto Somos GG.</div>
+          <div class="projeto-years">2021</div>
+          <a href="https://linktr.ee/somosgg" class="projeto-link" target="_blank" rel="noopener">→ ver</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       REDES & STACK
+  ══════════════════════════════ -->
+  <div id="comunidade">
+    <div class="sec">
+      <div class="comunidade-grid reveal">
+        <div class="comunidade-text">
+          <p class="section-label">redes &amp; comunidades</p>
+          <h2 class="section-title">Me encontre<br><em>por aqui.</em></h2>
+          <p>Estou presente em várias plataformas sempre com o mesmo usuário.</p>
+          <div class="redes-list">
+            <a href="https://github.com/leitoraincomum" class="rede-item" target="_blank" rel="noopener">
+              <span class="rede-icon">github</span>
+              <span class="rede-handle">@leitoraincomum</span>
+            </a>
+            <a href="https://linkedin.com/in/leitoraincomum" class="rede-item" target="_blank" rel="noopener">
+              <span class="rede-icon">linkedin</span>
+              <span class="rede-handle">leitoraincomum</span>
+            </a>
+            <a href="https://www.instagram.com/leitoraincomum" class="rede-item" target="_blank" rel="noopener">
+              <span class="rede-icon">instagram</span>
+              <span class="rede-handle">leitoraincomum</span>
+            </a>
+            <a href="https://dev.to/leitoraincomum" class="rede-item" target="_blank" rel="noopener">
+              <span class="rede-icon">dev.to</span>
+              <span class="rede-handle">leitoraincomum</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="tecnologias">
+          <p class="section-label" style="margin-bottom:1.5rem;">stack &amp; interesses</p>
+          <div class="tech-row">
+            <div class="tech-label">linguagens &amp; backend</div>
+            <div class="tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Kotlin</span>
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">SQL</span>
+            </div>
+          </div>
+          <div class="tech-row">
+            <div class="tech-label">dados &amp; infraestrutura</div>
+            <div class="tech-tags">
+              <span class="tech-tag">PySpark</span>
+              <span class="tech-tag">Databricks</span>
+              <span class="tech-tag">ETL | ELT</span>
+              <span class="tech-tag">AWS</span>
+              <span class="tech-tag">Azure</span>
+            </div>
+          </div>
+          <div class="tech-row">
+            <div class="tech-label">gestão &amp; projetos</div>
+            <div class="tech-tags">
+              <span class="tech-tag">Logística</span>
+              <span class="tech-tag">Operações</span>
+              <span class="tech-tag">Gestão de Projetos</span>
+              <span class="tech-tag">Open Source</span>
+            </div>
+          </div>
+          <div class="tech-row">
+            <div class="tech-label">comunidades</div>
+            <div class="tech-tags">
+              <span class="tech-tag">Google AI Community</span>
+              <span class="tech-tag">LinuxTips</span>
+              <span class="tech-tag">Feministech</span>
+              <span class="tech-tag">GitHub Open Source Community SP</span>
+              <span class="tech-tag">Wakanda Streamers</span>
+              <span class="tech-tag">Impulso Preto</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       CONTATO
+  ══════════════════════════════ -->
+  <div id="contato" class="sec-surface">
+    <div class="sec">
+      <div class="contato-inner reveal">
+        <p class="section-label">contato</p>
+        <h2 class="section-title">Vamos<br><em>conversar?</em></h2>
+        <p class="contato-text">
+          Aberta a convites para palestras, meetups, podcasts e colaborações em
+          comunidades tech. Também adoro uma boa conversa sobre dados, diversidade e a vida.
+        </p>
+        <a href="mailto:fernanda@leitoraincomum.com.br" class="contato-email">
+          fernanda@leitoraincomum.com.br
+        </a>
+        <a href="https://beacons.ai/leitoraincomum" class="contato-email" target="_blank">
+          mais links
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-logo">fernanda souza · @leitoraincomum · © 2021 - 2026 </span>
+    <span class="footer-credit">pessoas &gt; tecnologia</span>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+
+</body>
+</html>
