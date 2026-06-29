@@ -1,6 +1,8 @@
+![Banner com informações](new_banner.png)
+
 # leitoraincomum.github.io
 Repositório criado para juntar todas as versões do meu site de informações pessoais.
-- [www.leitoraincomum.com.br](www.leitoraincomum.com.br)
+- www.leitoraincomum.com.br
 
 [Primeira versão](https://github.com/leitoraincomum/site_leitoraincomum/tree/v.1)
 - Foi desenvolvida durante a disciplina de Desenvolvimento de Software enquanto eu cursava a graduação em Análise  e Desenvolvimento de Sistemas.
@@ -11,7 +13,4 @@ Repositório criado para juntar todas as versões do meu site de informações p
 
 [Terceira versão](https://github.com/leitoraincomum/site_leitoraincomum/tree/v.3)
 - Está em construção para ser uma versão mais responsiva e com menos elementos do que a anterior.
-- Sera apenas uma página com todas as informações, ou seja, uma *landing page*.
-
-[Quarta versão](https://github.com/leitoraincomum/site_leitoraincomum/tree/v.4)
-- Melhorias das v.3
+- É apenas uma página com todas as informações, ou seja, uma *landing page*.
