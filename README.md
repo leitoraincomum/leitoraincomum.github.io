@@ -1,3 +1,5 @@
+![Banner com informações](imagens/gerais/new_banner.png)
+
 # leitoraincomum.github.io
 
 [![Site](https://img.shields.io/badge/site-leitoraincomum.com.br-b794f4?style=flat-square)](https://leitoraincomum.com.br)
