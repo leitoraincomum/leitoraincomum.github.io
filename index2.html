@@ -20,6 +20,238 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Galeria (preview) -->
+  <style>
+    /* ── GALERIA ── */
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .galeria-item {
+      position: relative;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      cursor: pointer;
+      border: 1px solid var(--border);
+      background: var(--card);
+    }
+
+    .galeria-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+      filter: brightness(0.85);
+    }
+
+    .galeria-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      background:
+        linear-gradient(135deg, rgba(183,148,244,0.06) 0%, transparent 60%),
+        var(--card);
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(135deg, rgba(183,148,244,0.06) 0%, transparent 60%);
+      background-size: 40px 40px, 40px 40px, 100% 100%;
+      transition: transform 0.5s ease;
+    }
+
+    .galeria-placeholder-icon {
+      font-size: 1.8rem;
+      line-height: 1;
+      opacity: 0.4;
+    }
+
+    .galeria-placeholder-text {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      text-transform: uppercase;
+      opacity: 0.5;
+    }
+
+    .galeria-item:hover .galeria-placeholder,
+    .galeria-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .galeria-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(13,13,13,0.92) 0%, rgba(13,13,13,0.2) 50%, transparent 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.2rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .galeria-item:hover .galeria-overlay { opacity: 1; }
+
+    .galeria-overlay-nome {
+      font-family: 'Lora', serif;
+      font-size: 0.88rem;
+      color: var(--text);
+      line-height: 1.35;
+      margin-bottom: 0.3rem;
+    }
+
+    .galeria-overlay-meta {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 5000;
+      background: rgba(13,13,13,0.96);
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .lightbox.open { display: flex; }
+
+    .lightbox-img-wrap {
+      position: relative;
+      max-width: 860px;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      border: 1px solid var(--border);
+      background: var(--card);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .lightbox-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      width: 100%;
+      height: 100%;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .lightbox-placeholder-icon { font-size: 3rem; opacity: 0.25; }
+
+    .lightbox-placeholder-text {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .lightbox-caption {
+      text-align: center;
+      max-width: 860px;
+      width: 100%;
+    }
+
+    .lightbox-caption-nome {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-style: italic;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+    }
+
+    .lightbox-caption-meta {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--accent);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .lightbox-nav {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .lightbox-btn {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .lightbox-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+    .lightbox-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 0.45rem 0.9rem;
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .lightbox-close:hover { border-color: var(--accent); color: var(--accent); }
+
+    .lightbox-counter {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      color: var(--muted);
+      letter-spacing: 0.12em;
+      min-width: 60px;
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .galeria-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 540px) {
+      .galeria-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
@@ -27,11 +259,29 @@
   <div class="cursor" id="cursor"></div>
   <div class="cursor-ring" id="cursorRing"></div>
 
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()">✕ fechar</button>
+    <div class="lightbox-img-wrap" id="lightboxImgWrap">
+      <!-- preenchido via JS -->
+    </div>
+    <div class="lightbox-caption">
+      <div class="lightbox-caption-nome" id="lightboxNome"></div>
+      <div class="lightbox-caption-meta" id="lightboxMeta"></div>
+    </div>
+    <div class="lightbox-nav">
+      <button class="lightbox-btn" onclick="navLightbox(-1)">← anterior</button>
+      <span class="lightbox-counter" id="lightboxCounter"></span>
+      <button class="lightbox-btn" onclick="navLightbox(1)">próxima →</button>
+    </div>
+  </div>
+
   <!-- MOBILE NAV OVERLAY -->
   <div class="nav-overlay" id="navOverlay">
     <a href="#sobre"    onclick="closeMenu()">sobre</a>
     <a href="#formacao" onclick="closeMenu()">formação</a>
     <a href="#eventos"  onclick="closeMenu()">eventos</a>
+    <a href="#galeria"  onclick="closeMenu()">galeria</a>
     <a href="#projetos" onclick="closeMenu()">projetos</a>
     <a href="#contato"  onclick="closeMenu()">contato</a>
   </div>
@@ -43,6 +293,7 @@
       <li><a href="#sobre">sobre</a></li>
       <li><a href="#formacao">formação</a></li>
       <li><a href="#eventos">eventos</a></li>
+      <li><a href="#galeria">galeria</a></li>
       <li><a href="#projetos">projetos</a></li>
       <li><a href="#contato">contato</a></li>
     </ul>
@@ -140,7 +391,7 @@
           <p>
             Em 2020, durante a pandemia, comecei a atuar como voluntária
             em cursos de formação tech para jovens em situação de
-            vulnerabilidade. Essa experiência mudou meu olhar sobre o que 
+            vulnerabilidade. Essa experiência mudou meu olhar sobre o que
             eu posso fazer com a tecnologia — e para quem.
           </p>
           <div class="sobre-quote">
@@ -237,7 +488,7 @@
         <button class="tab-btn" onclick="showTab('2021', this)">2021</button>
       </div>
 
-      <!-- 2026 -->   
+      <!-- 2026 -->
       <div class="tab-content active" id="tab-2026">
         <div class="evento-list">
           <div class="evento-item">
@@ -269,19 +520,19 @@
             <div class="evento-name">Meetup LinuxTips - Unibrad<small>São Paulo/SP</small></div>
             <span class="evento-role palestra">organização</span>
           </div>
-    
+
           <div class="evento-item">
             <div class="evento-month">Jun</div>
             <div class="evento-name">Ler para evoluir · Como a leitura impulsiona o aprendizado contínuo - Clube de Leitura Dev<small>On-line</small></div>
             <span class="evento-role palestra">roda de conversa</span>
           </div>
-          
+
           <div class="evento-item">
             <div class="evento-month">Jul</div>
             <div class="evento-name">Meetup LinuxTips - RedHat<small>São Paulo/SP</small></div>
             <span class="evento-role palestra">organização</span>
           </div>
-    
+
         </div>
     </div>
 
@@ -458,9 +709,130 @@
   </div>
 
   <!-- ══════════════════════════════
+       GALERIA
+  ══════════════════════════════ -->
+  <div id="galeria" class="sec-surface">
+    <div class="sec">
+      <p class="section-label reveal">galeria</p>
+      <h2 class="section-title reveal">Momentos em<br><em>imagens.</em></h2>
+
+      <!--
+        COMO USAR:
+        Substitua cada <div class="galeria-placeholder"> por uma tag <img src="caminho/foto.jpg" alt="descrição">
+        dentro do .galeria-item correspondente. O lightbox vai funcionar automaticamente.
+        Exemplo:
+          <div class="galeria-item" onclick="openLightbox(0)">
+            <img src="fotos/meetup-linuxtips-2026.jpg" alt="Meetup LinuxTips 2026">
+            <div class="galeria-overlay">...</div>
+          </div>
+      -->
+
+      <div class="galeria-grid reveal">
+
+        <div class="galeria-item" onclick="openLightbox(0)">
+          <img src="/imagens/gerais/perfil.jpg" alt="Meetup LinuxTips · FATEC Mogi das Cruzes">
+          <div class="galeria-overlay">
+            <div class="galeria-overlay-nome">Meetup LinuxTips · FATEC Mogi das Cruzes</div>
+            <div class="galeria-overlay-meta">Jan 2026 · Mogi das Cruzes/SP</div>
+          </div>
+        </div>
+
+        <div class="galeria-item" onclick="openLightbox(1)">
+          <div class="galeria-placeholder">
+            <div class="galeria-placeholder-icon">📸</div>
+            <div class="galeria-placeholder-text">adicionar foto</div>
+          </div>
+          <div class="galeria-overlay">
+            <div class="galeria-overlay-nome">Networking além do código · UNIFAAT</div>
+            <div class="galeria-overlay-meta">Fev 2026 · Atibaia/SP</div>
+          </div>
+        </div>
+
+        <div class="galeria-item" onclick="openLightbox(2)">
+          <div class="galeria-placeholder">
+            <div class="galeria-placeholder-icon">📸</div>
+            <div class="galeria-placeholder-text">adicionar foto</div>
+          </div>
+          <div class="galeria-overlay">
+            <div class="galeria-overlay-nome">Papo de Garota Tech · Oracle</div>
+            <div class="galeria-overlay-meta">Mar 2026 · São Paulo/SP</div>
+          </div>
+        </div>
+
+        <div class="galeria-item" onclick="openLightbox(3)">
+          <div class="galeria-placeholder">
+            <div class="galeria-placeholder-icon">📸</div>
+            <div class="galeria-placeholder-text">adicionar foto</div>
+          </div>
+          <div class="galeria-overlay">
+            <div class="galeria-overlay-nome">Mudança de planos · Google</div>
+            <div class="galeria-overlay-meta">Jan 2025 · São Paulo/SP</div>
+          </div>
+        </div>
+
+        <div class="galeria-item" onclick="openLightbox(4)">
+          <div class="galeria-placeholder">
+            <div class="galeria-placeholder-icon">📸</div>
+            <div class="galeria-placeholder-text">adicionar foto</div>
+          </div>
+          <div class="galeria-overlay">
+            <div class="galeria-overlay-nome">Meetup LinuxTips · Oracle</div>
+            <div class="galeria-overlay-meta">Jul 2025 · São Paulo/SP</div>
+          </div>
+        </div>
+
+        <div class="galeria-item" onclick="openLightbox(5)">
+          <div class="galeria-placeholder">
+            <div class="galeria-placeholder-icon">📸</div>
+            <div class="galeria-placeholder-text">adicionar foto</div>
+          </div>
+          <div class="galeria-overlay">
+            <div class="galeria-overlay-nome">Hackathon Mulheres em Dados</div>
+            <div class="galeria-overlay-meta">Out 2025 · Remoto</div>
+          </div>
+        </div>
+
+        <div class="galeria-item" onclick="openLightbox(6)">
+          <div class="galeria-placeholder">
+            <div class="galeria-placeholder-icon">📸</div>
+            <div class="galeria-placeholder-text">adicionar foto</div>
+          </div>
+          <div class="galeria-overlay">
+            <div class="galeria-overlay-nome">Campus Party SP · Palco Tech Orange Juice</div>
+            <div class="galeria-overlay-meta">Jul 2024 · São Paulo/SP</div>
+          </div>
+        </div>
+
+        <div class="galeria-item" onclick="openLightbox(7)">
+          <div class="galeria-placeholder">
+            <div class="galeria-placeholder-icon">📸</div>
+            <div class="galeria-placeholder-text">adicionar foto</div>
+          </div>
+          <div class="galeria-overlay">
+            <div class="galeria-overlay-nome">A diversidade em diversos recortes · Octogats Conf</div>
+            <div class="galeria-overlay-meta">Set 2022 · São Paulo/SP</div>
+          </div>
+        </div>
+
+        <div class="galeria-item" onclick="openLightbox(8)">
+          <div class="galeria-placeholder">
+            <div class="galeria-placeholder-icon">📸</div>
+            <div class="galeria-placeholder-text">adicionar foto</div>
+          </div>
+          <div class="galeria-overlay">
+            <div class="galeria-overlay-nome">TDC SP · Trilha de Diversidade</div>
+            <div class="galeria-overlay-meta">Set 2021 · São Paulo/SP</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
        PROJETOS
   ══════════════════════════════ -->
-  <div id="projetos" class="sec-surface">
+  <div id="projetos">
     <div class="sec">
       <p class="section-label reveal">projetos</p>
       <h2 class="section-title reveal">Coisas que<br><em>construí.</em></h2>
@@ -514,7 +886,7 @@
   <!-- ══════════════════════════════
        REDES & STACK
   ══════════════════════════════ -->
-  <div id="comunidade">
+  <div id="comunidade" class="sec-surface">
     <div class="sec">
       <div class="comunidade-grid reveal">
         <div class="comunidade-text">
@@ -618,6 +990,76 @@
 
   <!-- Scripts -->
   <script src="script.js"></script>
+
+  <!-- Galeria JS (preview) -->
+  <script>
+    const galeriaData = [
+      { nome: 'Meetup LinuxTips · FATEC Mogi das Cruzes', meta: 'Jan 2026 · Mogi das Cruzes/SP' },
+      { nome: 'Networking além do código · UNIFAAT',       meta: 'Fev 2026 · Atibaia/SP' },
+      { nome: 'Papo de Garota Tech · Oracle',             meta: 'Mar 2026 · São Paulo/SP' },
+      { nome: 'Mudança de planos · Google',               meta: 'Jan 2025 · São Paulo/SP' },
+      { nome: 'Meetup LinuxTips · Oracle',                meta: 'Jul 2025 · São Paulo/SP' },
+      { nome: 'Hackathon Mulheres em Dados',              meta: 'Out 2025 · Remoto' },
+      { nome: 'Campus Party SP · Palco Tech Orange Juice',meta: 'Jul 2024 · São Paulo/SP' },
+      { nome: 'A diversidade em diversos recortes · Octogats Conf', meta: 'Set 2022 · São Paulo/SP' },
+      { nome: 'TDC SP · Trilha de Diversidade',          meta: 'Set 2021 · São Paulo/SP' },
+    ];
+
+    let currentIndex = 0;
+
+    function openLightbox(index) {
+      currentIndex = index;
+      renderLightbox();
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function navLightbox(dir) {
+      currentIndex = (currentIndex + dir + galeriaData.length) % galeriaData.length;
+      renderLightbox();
+    }
+
+    function renderLightbox() {
+      const item = galeriaData[currentIndex];
+      const wrap = document.getElementById('lightboxImgWrap');
+
+      // Tenta pegar o src da imagem real se existir no grid
+      const gridItem = document.querySelectorAll('.galeria-item')[currentIndex];
+      const realImg = gridItem ? gridItem.querySelector('img') : null;
+
+      if (realImg) {
+        wrap.innerHTML = `<img src="${realImg.src}" alt="${item.nome}">`;
+      } else {
+        wrap.innerHTML = `
+          <div class="lightbox-placeholder">
+            <div class="lightbox-placeholder-icon">📸</div>
+            <div class="lightbox-placeholder-text">foto não adicionada ainda</div>
+          </div>`;
+      }
+
+      document.getElementById('lightboxNome').textContent = item.nome;
+      document.getElementById('lightboxMeta').textContent = item.meta;
+      document.getElementById('lightboxCounter').textContent =
+        `${currentIndex + 1} / ${galeriaData.length}`;
+    }
+
+    // Fechar com Escape ou clique fora
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+      if (e.target === this) closeLightbox();
+    });
+    document.addEventListener('keydown', function(e) {
+      const lb = document.getElementById('lightbox');
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'Escape')      closeLightbox();
+      if (e.key === 'ArrowRight')  navLightbox(1);
+      if (e.key === 'ArrowLeft')   navLightbox(-1);
+    });
+  </script>
 
 </body>
 </html>
