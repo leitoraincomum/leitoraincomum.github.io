@@ -59,19 +59,19 @@ Distribuído sob a licença [GPL-3.0](LICENSE).
 
 ## Histórico das versões
 
-[Primeira versão](https://github.com/leitoraincomum/site_leitoraincomum/tree/v.1)
+[v.1 · Primeira versão](https://github.com/leitoraincomum/site_leitoraincomum/tree/v.1)
 - Foi desenvolvida durante a disciplina de Desenvolvimento de Software enquanto eu cursava a graduação em Análise  e Desenvolvimento de Sistemas.
 - Toda a documentacao referente esta na branch.
 
-[Segunda versão](https://github.com/leitoraincomum/site_leitoraincomum/tree/v.2)
+[v.2 · Segunda versão](https://github.com/leitoraincomum/site_leitoraincomum/tree/v.2)
 - Foi uma evolução da primeira para ter mais responsividade ser mais limpa.
 
-[Terceira versão](https://github.com/leitoraincomum/site_leitoraincomum/tree/v.3)
+[v.3 · Terceira versão](https://github.com/leitoraincomum/site_leitoraincomum/tree/v.3)
 - Está em construção para ser uma versão mais responsiva e com menos elementos do que a anterior.
 - Sera apenas uma página com todas as informações, ou seja, uma *landing page*.
 
-[Quarta versão](https://github.com/leitoraincomum/site_leitoraincomum/tree/v.4)
+[v.4 · Quarta versão](https://github.com/leitoraincomum/site_leitoraincomum/tree/v.4)
 - Melhorias das v.3
 
-[Quinta versão](https://github.com/leitoraincomum/site_leitoraincomum/tree/v.5) 
+[v.5 · Quinta versão](https://github.com/leitoraincomum/site_leitoraincomum/tree/v.5) 
 - Reformulação para uma versão mais moderna e organizada das informações
